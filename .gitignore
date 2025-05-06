@@ -16,3 +16,39 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# --- Additional Useful Ignore Patterns ---
+
+# General log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Python compiled
+*.py[cod]
+
+# Java compiled
+*.class
+*.jar
+*.war
+
+# Applications
+*.app
+*.exe
+
+# Video/media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+# Maven / build artifacts
+target/
+dist/
+
+# Unit test reports
+TEST*.xml
