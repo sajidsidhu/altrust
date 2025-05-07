@@ -1,29 +1,30 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\TicketController;
-use App\Http\Controllers\SupportController;
-use App\Http\Controllers\FaqController;
-use App\Http\Controllers\LeadController;
-use App\Http\Controllers\UkRegistrationController;
-use App\Http\Controllers\OffShoreController;
-use App\Http\Controllers\MemberController;
-use App\Http\Controllers\FptController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\DmsController;
-use App\Http\Controllers\DocumentController;
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\TwoStepVerificationController;
-use App\Http\Controllers\DraftController;
-use App\Http\Controllers\MessageController;
-use App\Http\Controllers\ReportController;
-use App\Http\Controllers\MarketManagementController;
-use App\Http\Controllers\DraftOffshoreController;
-use App\Http\Controllers\DraftMemberController;
-use App\Http\Controllers\DraftfptController;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\CheckAdviser;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DmsController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\FptController;
+use App\Http\Controllers\LeadController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DraftController;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\SupportController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\DraftfptController;
+use App\Http\Controllers\OffShoreController;
+use App\Http\Controllers\DraftMemberController;
+use App\Http\Controllers\DraftOffshoreController;
+use App\Http\Controllers\UkRegistrationController;
+use App\Http\Controllers\MarketManagementController;
 
+use App\Http\Controllers\TwoStepVerificationController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/test', function () {
+    return 'Working!';
+});
 
 Auth::routes(['verify' => true]);
 
